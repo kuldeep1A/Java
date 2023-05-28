@@ -1,5 +1,6 @@
  public class Animal {
-    private String type;
+//    Protected that represent this object are use on sub classes
+    protected String type;
     private String size;
     private double weight;
 
