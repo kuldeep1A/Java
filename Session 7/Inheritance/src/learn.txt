@@ -4,3 +4,10 @@ The overridden method can do noe of three things:
 > It can simply call the parent class's method, which is somewhat redundant to do.
 > Or the method can call the parent class's method, and include other code to
     run, so it can extend the functionality for the Dog, for that behavior.
+
+Polymorphism
+
+Polymorphism simply means 'many forms'.
+And as you've seen, some advantages of Polymorphism are:
+> It makes code simpler.
+> It encourage code extensibility.
