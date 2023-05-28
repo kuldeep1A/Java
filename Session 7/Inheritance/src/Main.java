@@ -2,6 +2,8 @@ public class Main {
     public static void main(String[] args){
         Animal animal = new Animal("Generic Animal", "Huge", 40);
         doAnimalStuff(animal, "slow");
+        Animal e = new Animal();
+        System.out.println(e);
 
         Dog dog = new Dog();
         doAnimalStuff(dog, "fast");

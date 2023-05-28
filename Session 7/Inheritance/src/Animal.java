@@ -1,11 +1,11 @@
  public class Animal {
-//    Protected that represent this object are use on sub classes
+//    Protected that represent this object are use on subclasses
     protected String type;
     private String size;
     private double weight;
 
     public Animal(){
-        
+        System.out.println("hello");
     }
 
      @java.lang.Override
