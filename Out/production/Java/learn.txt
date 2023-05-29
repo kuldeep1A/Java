@@ -1,6 +1,0 @@
-Overridden Method
-The overridden method can do noe of three things:
-> It can implement completely different behavior, overriding the behavior of the parent.
-> It can simply call the parent class's method, which is somewhat redundant to do.
-> Or the method can call the parent class's method, and include other code to
-    run, so it can extend the functionality for the Dog, for that behavior.
