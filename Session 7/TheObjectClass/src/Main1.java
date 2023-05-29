@@ -1,4 +1,4 @@
-public class Main1 extends Object {
+public class Main1 {
     public static void main(String[] args) {
         Student alice = new Student("Alice", 20);
 //        System.out.println(alice.toString());
@@ -11,7 +11,7 @@ public class Main1 extends Object {
 
 class Student {
     protected String name;
-    private int age;
+    private final int age;
     Student(String name, int age){
         this.name = name;
         this.age = age;
@@ -33,7 +33,7 @@ class Student {
 }
 
 class PrimarySchoolStudent extends Student {
-    private String parentName;
+    private final String parentName;
     PrimarySchoolStudent(String name, int age, String parentName){
         super(name, age);
         this.parentName = parentName;
