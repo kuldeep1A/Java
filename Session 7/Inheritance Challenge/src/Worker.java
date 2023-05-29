@@ -1,11 +1,9 @@
 public class Worker {
-    private String name;
-    private String birthDate;
+    private final String name;
+    private final String birthDate;
     protected String endDate;
 
-    public Worker(){
 
-    }
 
     public Worker(String name, String birthDate) {
         this.name = name;
