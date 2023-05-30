@@ -8,6 +8,15 @@
       <sourceFolder url="file://$MODULE_DIR$/Session 7/TheObjectClass/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Java Example/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Java Example/Algo/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java Example/Algo/BIT Menipulation/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java Example/Algo/Dynamic Programming/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java Example/Algo/Graph/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java Example/Algo/LinkedList/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java Example/Algo/Number Theory/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java Example/Algo/Sorting and Searching/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java Example/Algo/String or Array/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java Example/Algo/Tree or Binary Search Tree/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Session 7/Method Overriding vs Overloading/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Session 7/this vs super/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
