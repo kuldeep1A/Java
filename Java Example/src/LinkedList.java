@@ -70,20 +70,61 @@ public class LinkedList {
             fast = fast.next.next;
         }
     }
+    public static LinkedList mergeLists(LinkedList list1, LinkedList list2){
+        LinkedList newList = new LinkedList();
+        Node currNode1 = list1.head;
+        Node currNode2 = list2.head;
+        while(!Objects.equals(currNode2, null) && !Objects.equals(currNode1, null)){
+            if(currNode1.data < currNode2.data){
+                newList.addNode(currNode1.data);
+                currNode1 = currNode1.next;
+            } else {
+                newList.addNode(currNode2.data);
+                currNode2 = currNode2.next;
+            }
+        }
+        while(!Objects.equals(currNode1, null)){
+            newList.addNode(currNode1.data);
+            currNode1 = currNode1.next;
+        }
+        while(!Objects.equals(currNode2, null)){
+            newList.addNode(currNode2.data);
+            currNode2 = currNode2.next;
+        }
+        return newList;
+    }
+    public static LinkedList sort(LinkedList list){
+        LinkedList newList = new LinkedList();
 
-    public static void main(String[] args) {
-        LinkedList list = new LinkedList();
-        // list
-        list.addFirst(1);
-        list.addNode(2);
-        list.addNode(3);
-        list.addNode(4);
-        list.addNode(5);
-        list.addNode(6);
-        //print
-        list.print();
-        //length
-        System.out.println(list.getLength());
     }
 
+    public static void main(String[] args) {
+        // First list
+        LinkedList list1 = new LinkedList();
+        list1.addFirst(1);
+        list1.addNode(7);
+        list1.addNode(8);
+        list1.addNode(9);
+        list1.addNode(5);
+        list1.print();
+        System.out.println(list1.getLength());
+
+        // Second list
+        LinkedList list2 = new LinkedList();
+        list2.addNode(6);
+        list2.addNode(2);
+        list2.addNode(3);
+        list2.addNode(4);
+        list2.addNode(10);
+        list2.print();
+        System.out.println(list2.getLength());
+
+        LinkedList merged = LinkedList.mergeLists(list1, list2);
+
+        Node currNode = merged.head;
+        while(!Objects.equals(currNode, null)){
+            System.out.print(currNode.data + "->");
+            currNode = currNode.next;
+        }
+    }
 }
