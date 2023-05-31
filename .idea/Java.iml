@@ -3,9 +3,6 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/Session 7/Inheritance Challenge/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Session 7/Inheritance/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Session 7/TheObjectClass/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Java Example/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Java Example/Algo/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Java Example/Algo/BIT Menipulation/src" isTestSource="false" />
@@ -16,9 +13,13 @@
       <sourceFolder url="file://$MODULE_DIR$/Java Example/Algo/Sorting and Searching/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Java Example/Algo/String or Array/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Java Example/Algo/Tree or Binary Search Tree/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Session 7/Method Overriding vs Overloading/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Session 7/this vs super/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Session 7/StringFormating/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Section 7/Inheritance Challenge/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Section 7/Inheritance/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Section 7/Method Overriding vs Overloading/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Section 7/StringFormating/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Section 7/TheObjectClass/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Section 7/this vs super/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Section 8/Composition/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
