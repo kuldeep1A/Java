@@ -26,7 +26,7 @@ class Monitor extends Product {
     }
 
     public void drawPixelAt(int x, int y, String color){
-        System.out.printf("Drawing pixel at %d, %d in color %s ", x, y, color);
+        System.out.printf("Drawing pixel at %d, %d in color %s %n\n", x, y, color);
     }
 }
 
@@ -63,5 +63,12 @@ class ComputerCase extends Product {
     }
     public void pressPowerButton(){
         System.out.println("Power button pressed");
+    }
+
+    @Override
+    public String toString() {
+        return "ComputerCase{" +
+                "powerSupply='" + powerSupply + '\'' +
+                "} " + super.toString();
     }
 }
