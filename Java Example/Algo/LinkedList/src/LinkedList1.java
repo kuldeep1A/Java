@@ -90,23 +90,78 @@ public class LinkedList1 {
 
         head = mergedHead;
     }
+    public void sort(){
+        head = mergedSort(head);
+    }
+    private Node mergedSort(Node head){
+        if(head == null || head.next == null)
+            return head;
+
+        Node Middle = getMiddle(head);
+        Node nextToMiddle = Middle.next;
+        Middle.next = null;
+
+        Node left = mergedSort(head);
+        Node right = mergedSort(nextToMiddle);
+
+        return merge(left, right);
+    }
+
+    private Node getMiddle(Node head){
+        if(head == null)
+            return null; // null = head
+
+        Node slow = head;
+        Node fast = head;
+
+        while (fast.next != null && fast.next.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
+
+    private Node merge(Node left, Node right){
+        Node sorted = null;
+
+        if(left == null)
+            return right;
+
+        if(right == null)
+            return left;
+
+        if(left.data <= right.data){
+            sorted = left;
+            sorted.next = merge(left.next, right);
+        }else{
+            sorted = right;
+            sorted.next = merge(left, right.next);
+        }
+
+        return sorted;
+    }
 
     public static void main(String[] args) {
         LinkedList1 list1 = new LinkedList1();
         list1.insert(1);
-        list1.insert(2);
-        list1.insert(3);
+        list1.insert(5);
+        list1.insert(6);
         list1.display();
+        System.out.println(list1.getSize());;
 
         LinkedList1 list2 = new LinkedList1();
         list2.insert(4);
-        list2.insert(5);
-        list2.insert(6);
+        list2.insert(2);
+        list2.insert(3);
         list2.display();
+        System.out.println(list2.getSize());;
 
         LinkedList1 merged = new LinkedList1();
         merged.mergedList(list1, list2);
         System.out.print("Merged List: ");
+        merged.display();
+        System.out.print("Sorted List: ");
+        merged.sort();
         merged.display();
     }
 }
