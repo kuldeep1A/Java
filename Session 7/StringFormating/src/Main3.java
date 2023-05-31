@@ -1,14 +1,17 @@
 public class Main3 {
 
     public static void main(String[] args) {
+        // † = \u2022 or • = \u2022
+
         String bulletIt = "Print a Bulleted List:\n" +
-                "\t\u2020 First Point\n" +
-                "\t\t\u2020 Sub Point";
+                "\t† First Point\n" +
+                "\t\t† Sub Point";
+
         System.out.println(bulletIt);
         String textBlock = """
                 Print a Bulleted List:
-                    \u2022 First Point
-                        \u2022 Sub Point""";
+                    • First Point
+                        • Sub Point""";
         System.out.println(textBlock);
 
         int age = 35;
