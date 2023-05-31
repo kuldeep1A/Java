@@ -20,7 +20,9 @@
       <sourceFolder url="file://$MODULE_DIR$/Section 7/TheObjectClass/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Section 7/this vs super/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Section 8/Composition/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Section 8/Challenge/src" isTestSource="false" />
     </content>
+    <content url="file://$MODULE_DIR$/Out" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
