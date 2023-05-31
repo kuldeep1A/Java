@@ -1,0 +1,4 @@
+Format Specifiers
+
+At their most complex, format specifiers take the form shown here.
+%[argument_index$][flags][width][.precision]conversion
