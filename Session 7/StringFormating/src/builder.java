@@ -2,7 +2,7 @@ public class builder {
     public static void main(String[] args) {
 
         String helloWorld = "Hello" + " World";
-        helloWorld.concat(" and Goodbye");
+        helloWorld += " and Goodbye";
 
         StringBuilder helloWorldBuilder = new StringBuilder("Hello" + " World");
         helloWorldBuilder.append(" and Goodbye");
@@ -11,6 +11,7 @@ public class builder {
         printInformation(helloWorldBuilder);
 
         StringBuilder emptyStart = new StringBuilder();
+
         emptyStart.append("a".repeat(57));
 
         StringBuilder emptyStart32 = new StringBuilder(32);

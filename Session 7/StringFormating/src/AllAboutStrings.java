@@ -6,7 +6,7 @@ public class AllAboutStrings {
         printInformation("");
         printInformation(" ");// space is blank
 
-        String str = "Hello Github is best for store code";
+        String str = "Github is best for store code";
         // if character is not present then return -1
         System.out.printf("Index of 'j' = %d %n", str.indexOf('j'));
         System.out.printf("Index of 'G' = %d %n", str.indexOf('G'));
@@ -21,17 +21,17 @@ public class AllAboutStrings {
             System.out.println("Values match ignoring case");
         }
 
-        if (str.startsWith("Hello")){
-            System.out.println("String starts with Hello");
+        if (str.startsWith("Github")){
+            System.out.println("String starts with 'Github'");
         }
-        if (str.endsWith("World")) {
-            System.out.println("String ends with World");
+        if (str.endsWith("code")) {
+            System.out.println("String ends with 'code'");
         }
-        if (str.contains("World")) {
-            System.out.println("String contains World");
+        if (str.contains("Github")) {
+            System.out.println("String contains 'Github'");
         }
 
-        if (str.contentEquals("Hello World")) {
+        if (str.contentEquals("Github is best for store code")) {
             System.out.println("Values match exactly");
         }
     }
