@@ -95,24 +95,76 @@ public class LinkedList {
         head = mergedHead;
     }
 
+    public void sort(){
+        head = mergeSort(head);
+    }
+
+    private Node mergeSort(Node head){
+        if(head == null || head.next == null){
+            return head;
+        }
+        Node Middle = getMiddle(head);
+        Node nextToMiddle = Middle.next;
+        Middle.next = null;
+
+        Node left = mergeSort(head);
+        Node right = mergeSort(nextToMiddle);
+
+        return merge(left, right);
+    }
+
+    private Node getMiddle(Node head){
+        if(head == null)
+            return null;
+
+        Node slow = head;
+        Node fast = head;
+
+        while(fast.next != null && fast.next.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
+
+    private Node merge(Node left, Node right){
+        Node sorted = null;
+
+        if(left == null)
+            return right;
+        if (right == null)
+            return left;
+        if (left.data <= right.data){
+            sorted = left;
+            sorted.next = merge(left.next, right);
+        } else {
+            sorted = right;
+            sorted.next = merge(left, right.next);
+        }
+
+        return sorted;
+    }
     public static void main(String[] args) {
         LinkedList list1 = new LinkedList();
+        list1.insert(4);
         list1.insert(1);
-        list1.insert(3);
-        list1.insert(5);
+        list1.insert(6);
         System.out.print("List 1: ");
         list1.display();
 
         LinkedList list2 = new LinkedList();
         list2.insert(2);
-        list2.insert(4);
-        list2.insert(6);
+        list2.insert(3);
+        list2.insert(5);
         System.out.print("List 2: ");
         list2.display();
 
-        LinkedList mergedList = new LinkedList();
-        mergedList.mergeList(list1, list2);
+        LinkedList merge = new LinkedList();
+        merge.mergeList(list1, list2);
         System.out.print("Merged List: ");
-        mergedList.display();
+        merge.display();
+        System.out.print("Sorted List: ");
+        merge.sort();
+        merge.display();
     }
 }
