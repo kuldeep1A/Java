@@ -11,6 +11,7 @@ public class ComputerFactory {
 //        thePC.getMonitor().drawPixelAt(10, 10, "red");
 //        thePC.getMotherboard().loadProgram("Windows OS");
 //        thePC.getComputerCase().pressPowerButton();
-        thePC.powerUp();
+        int d = thePC.powerUp(1463847412);
+        System.out.println(d);
     }
 }

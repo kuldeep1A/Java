@@ -15,9 +15,24 @@ public class PersonalComputer extends Product {
         monitor.drawPixelAt(1200, 50, "yellow");
     }
 
-    public void powerUp(){
+    public int powerUp(int x) {
         computerCase.pressPowerButton();
         drawLogo();
+        //1463847412
+        long newint = 0;
+        while (x != 0){
+            int last = x % 10;
+            newint += last;
+            newint *= 10;
+            x = (int) (double) x / 10;
+        }
+        newint = newint/10;
+        System.out.println(newint);
+        if (newint > -2147483648 && newint < Math.pow(2, 31) - 1){
+            return (int) newint;
+        } else{
+            return 0;
+        }
     }
 
 //    public ComputerCase getComputerCase(){
