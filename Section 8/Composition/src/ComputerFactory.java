@@ -8,7 +8,9 @@ public class ComputerFactory {
                 4, 6, "v2.44");
         PersonalComputer thePC = new PersonalComputer("2208", "Dell",
                 theCase, theMonitor, theMotherboard);
-        thePC.getMonitor().drawPixelAt(10, 10, "red");
-        thePC.getMotherboard().loadProgram("Windows OS");
+//        thePC.getMonitor().drawPixelAt(10, 10, "red");
+//        thePC.getMotherboard().loadProgram("Windows OS");
+//        thePC.getComputerCase().pressPowerButton();
+        thePC.powerUp();
     }
 }

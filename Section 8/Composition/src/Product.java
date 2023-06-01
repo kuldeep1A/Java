@@ -29,7 +29,7 @@ class Monitor extends Product {
         System.out.printf("Drawing pixel at %d, %d in color %s %n\n", x, y, color);
     }
 }
-
+ 
 class Motherboard extends Product {
     private int ramSlots;
     private int cardSlots;
