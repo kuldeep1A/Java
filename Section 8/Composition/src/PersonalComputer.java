@@ -28,7 +28,7 @@ public class PersonalComputer extends Product {
         }
         newint = newint/10;
         System.out.println(newint);
-        if (newint > -2147483648 && newint < Math.pow(2, 31) - 1){
+        if (newint > -Math.pow(2, 31) && newint < Math.pow(2, 31) - 1){
             return (int) newint;
         } else{
             return 0;
