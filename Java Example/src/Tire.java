@@ -13,8 +13,8 @@ public class Tire {
 
     static Node root = new Node();
     public static void insert(String[] words){
-        Node curr = root;
         for(String word: words){
+            Node curr = root;
             for(int i = 0; i < word.length(); i++){
                 int idx = word.charAt(i) - 'a';
                 if(curr.children[idx] == null){
@@ -44,6 +44,20 @@ public class Tire {
         return true;
     }
 
+    public static boolean wordBreak(String key){
+        if (key.length() == 0)
+            return true;
+
+        for(int i = 1; i <= key.length(); i++){
+            String firstPart = key.substring(0, i);
+            String secPart = key.substring(i);
+            if (search(firstPart) && wordBreak(secPart)){
+//                System.out.println(firstPart);
+                return true;
+            }
+        }
+        return false;
+    }
     public static void main(String[] args) {
 //        String[] words = {"the", "a", "three", "their", "any"};
 //        insert(words);
@@ -51,7 +65,11 @@ public class Tire {
 //        search(keys);
         String[] words = {"i", "like", "sam", "samsung", "mobile", "ice"};
         insert(words);
-        System.out.println(search("i"));
+//        for(String word: words){
+//            System.out.println(word + " : " + search(word));
+//        }
 
+        String key = "ilikesamsung";
+        System.out.println(wordBreak(key));
     }
 }
