@@ -115,10 +115,6 @@ public class Tire {
                 suffix[i] = "";
             }
         }
-        // print all suffix
-//        for (String s: suffix){
-//            System.out.println(s);
-//        }
         insert(suffix);
         System.out.println(countNode(root));
     }
