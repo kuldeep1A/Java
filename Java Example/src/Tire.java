@@ -58,18 +58,35 @@ public class Tire {
         }
         return false;
     }
+
+    public static boolean startWith(String prefix){
+        Node curr = root;
+        for(int i = 0; i < prefix.length(); i++){
+            int idx = prefix.charAt(i) - 'a';
+            Node node = curr.children[idx];
+            if (node == null)
+                return false;
+            curr = node;
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
 //        String[] words = {"the", "a", "three", "their", "any"};
 //        insert(words);
 //        String[] keys = {"the", "an", "three", "their", "any"};
 //        search(keys);
-        String[] words = {"i", "like", "sam", "samsung", "mobile", "ice"};
-        insert(words);
+        String[] words1 = {"i", "like", "sam", "samsung", "mobile", "ice"};
+        insert(words1);
 //        for(String word: words){
 //            System.out.println(word + " : " + search(word));
 //        }
 
         String key = "ilikesamsung";
         System.out.println(wordBreak(key));
+        String[] words = {"apple", "app", "mango", "man", "woman"};
+        insert(words);
+        String prefix = "app";
+        System.out.println( prefix + " : " + startWith(prefix));
     }
 }
