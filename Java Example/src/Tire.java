@@ -28,31 +28,30 @@ public class Tire {
         }
     }
 
-    public static void search(String[] keys){
+    public static boolean search(String keys){
         Node curr = root;
-        for(String key: keys){
-            boolean exist = true;
-            for(int i = 0; i < key.length(); i++){
-                int idx = key.charAt(i) - 'a';
-                Node node = curr.children[idx];
-                if(node == null){
-                    exist = false;
-                    break;
-                }
-                if(!node.endOfWord && i == key.length() - 1){
-                    exist = false;
-                    break;
-                }
-                curr = node;
-            }
-            System.out.println(key + " is " + exist);
+        for(int i = 0; i < keys.length(); i++){
+            int idx = keys.charAt(i) - 'a';
+            Node node = curr.children[idx];
+            if (node == null)
+                return false;
+            if (!node.endOfWord && i == keys.length() - 1)
+                return false;
+
+            curr = node;
         }
+
+        return true;
     }
 
     public static void main(String[] args) {
-        String[] words = {"the", "a", "three", "their", "any"};
+//        String[] words = {"the", "a", "three", "their", "any"};
+//        insert(words);
+//        String[] keys = {"the", "an", "three", "their", "any"};
+//        search(keys);
+        String[] words = {"i", "like", "sam", "samsung", "mobile", "ice"};
         insert(words);
-        String[] keys = {"the", "an", "three", "their", "anyd"};
-        search(keys);
+        System.out.println(search("i"));
+
     }
 }
