@@ -1,3 +1,5 @@
+import java.util.TreeMap;
+
 public class Tire {
     static class Node{
         Node[] children;
@@ -84,6 +86,25 @@ public class Tire {
         return count + 1;
     }
 
+    public static String ans = "";
+
+    public static void longestWord(Node root, StringBuilder temp){
+        if (root == null){
+            return;
+        }
+
+        for(int i = 0; i < 26; i++){
+            if(root.children[i] != null && root.children[i].endOfWord){
+                temp.append((char) (i + 'a'));
+                if (ans.length() < temp.length()){
+                    ans = temp.toString();
+                }
+                longestWord(root.children[i], temp);
+                temp.deleteCharAt(temp.length() - 1);
+            }
+        }
+    }
+
     public static void main(String[] args) {
 //        String[] words = {"the", "a", "three", "their", "any"};
 //        insert(words);
@@ -106,16 +127,21 @@ public class Tire {
 
         // Substring = all unique prefix of all suffix
         // total numbers of tire == count of unique prefix
-        String str = "ababa";
-        String[] suffix = new String[str.length() + 1];
-        // find suffix of 'str'
-        for (int i = 0; i < str.length() + 1; i++){
-            suffix[i] = str.substring(i);
-            if (i == str.length()){
-                suffix[i] = "";
-            }
-        }
-        insert(suffix);
-        System.out.println(countNode(root));
+//        String str = "ababa";
+//        String[] suffix = new String[str.length() + 1];
+//        // find suffix of 'str'
+//        for (int i = 0; i < str.length() + 1; i++){
+//            suffix[i] = str.substring(i);
+//            if (i == str.length()){
+//                suffix[i] = "";
+//            }
+//        }
+//        insert(suffix);
+//        System.out.println(countNode(root));
+        // Tries = all unique prefix
+        String[] words = {"a", "banana", "app", "appl", "ap", "apply", "apple"};
+        insert(words);
+        longestWord(root, new StringBuilder());
+        System.out.println(ans);
     }
 }
