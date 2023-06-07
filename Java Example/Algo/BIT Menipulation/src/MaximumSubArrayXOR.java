@@ -10,9 +10,60 @@
  */
 
 public class MaximumSubArrayXOR{
+    // Trie Node
+    static class TrieNode{
+        TrieNode[] children;
+
+//        TrieNode(){
+//            children = new TrireNode[2];
+//        }
+    }
+
+    // Trie class
+    static class Trie{
+        TrieNode root;
+
+        Trie(){
+            root = new TrieNode();
+        }
+
+        // Insert a number into Trie
+        void insert(int num){
+            TrieNode curr = root;
+
+            for(int i = 31; i >= 0; i--){
+                int bit = (num >> i) & 1;
+
+                if(curr.children[bit] == null){
+                    curr.children[bit] = new TrieNode();
+                }
+                curr = curr.children[bit];
+            }
+        }
+
+        // Find the maximum XOR value of a number in Trie
+//        void findMaxXOR(){}
+    }
+    // Function to find the maximum XOR value of a subarray
+//    static int findMaximumSubarrayXOR(int[] nums){
+//        int n = nums.length;
+//        int maxSubarrayXOR = Integer.MIN_VALUE;
+//        int prefixXOR = 0;
+//
+//        Trie trie = new Trie();
+//        trie.insert(0);
+//
+//        for(int i = 0; i < n; i++){
+//            prefixXOR ^= nums[i];
+//            trie.insert();
+//        }
+//
+//    }
 
     public static void main(String[] args) {
         int[] nums = {3, 10, 5, 25, 2, 8};
+//        int maxSubarrayXOR = findMaximumSubarrayXOR(nums);
+//        System.out.println("Maximum XOR value of a subarray: " + maxSubarrayXOR);
 
     }
 }
