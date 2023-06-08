@@ -1,6 +1,11 @@
 import java.util.ArrayList;
 import java.util.List;
 
+
+// Types of graph implementation
+// adjacency matrix
+// edge list
+// implicit graph
 class Graph1 {
     private final int numVertices;
     private final List<List<Integer>> adjacencyList;
