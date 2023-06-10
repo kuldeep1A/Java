@@ -22,6 +22,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Section 8/Composition/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Section 8/Challenge/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Java Example/leetcode" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Section 15/CollectionOverview" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$/Out" />
     <orderEntry type="inheritedJdk" />
