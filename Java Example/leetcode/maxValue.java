@@ -2,12 +2,7 @@ import java.util.Arrays;
 
 public class maxValue {
     public static int maxValue1(int n, int index, int maxSum){
-        int[] nums = new int[n];
-        Arrays.fill(nums, 0);
-        int sum = 0;
-        for(int i = 0; i < n; i++){
-
-        }
+        return n + index + maxSum;
     }
     public static void main(String[] args) {
         int n = 4;
