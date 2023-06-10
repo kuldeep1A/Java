@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class CollList {
     public static void main(String[] args) {
@@ -16,6 +14,8 @@ public class CollList {
 
         list.removeIf(s -> s.charAt(0) == 'A');
         System.out.println(list); // Remove Anna because at index of string 0 is 'A'
-
+        Collection<String> treeSet = new TreeSet<>();
+        treeSet.addAll(Arrays.asList(names));
+        System.out.println(treeSet);
     }
 }
