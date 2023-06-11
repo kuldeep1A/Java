@@ -13,16 +13,17 @@
       <sourceFolder url="file://$MODULE_DIR$/Java Example/Algo/Sorting and Searching/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Java Example/Algo/String or Array/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Java Example/Algo/Tree or Binary Search Tree/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Section 7/Inheritance Challenge/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Section 7/Inheritance/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Section 7/Method Overriding vs Overloading/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Section 7/StringFormating/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Section 7/TheObjectClass/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Section 7/this vs super/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Section 8/Composition/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Section 8/Challenge/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Java Example/leetcode" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Section 15/CollectionOverview" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Section 7 OOP Part 1 - Inheritance/Inheritance Challenge/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Section 7 OOP Part 1 - Inheritance/Inheritance/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Section 7 OOP Part 1 - Inheritance/Method Overriding vs Overloading/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Section 7 OOP Part 1 - Inheritance/StringFormating/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Section 7 OOP Part 1 - Inheritance/TheObjectClass/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Section 7 OOP Part 1 - Inheritance/this vs super/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Section 8 OOP Part 2 - Polymorshism/Challenge/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Section 8 OOP Part 2 - Polymorshism/Composition/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Section 9 Arrays/INTRO" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$/Out" />
     <orderEntry type="inheritedJdk" />
