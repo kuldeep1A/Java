@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        int[] firstArr = getRandomArray(10);
+        int[] firstArr = getRandomArray(9);
 //        for(int i : res){
 //            System.out.println(i);
 //        }
@@ -27,6 +27,21 @@ public class Main {
         //small size of array
         int[] fiveArr = Arrays.copyOf(thirdArr, 3);
         System.out.println(Arrays.toString(fiveArr));
+
+        String[] names = {"Charlie", "David", "Eve","Andy", "Bob"};
+        Arrays.sort(names);
+        System.out.println(Arrays.toString(names));
+        if (Arrays.binarySearch(names, "Eve") >= 0){
+            System.out.println("Found Mark in the list");
+        }
+
+        int[] s1 = {1,2,3,4,5};
+        int[] s2 = {1,2,3,4,5};
+        if (Arrays.equals(s1, s2)){
+            System.out.println("Arrays are equals");
+        } else{
+            System.out.println("Arrays are not equal");
+        }
     }
     private static int[] getRandomArray(int len){
         Random random = new Random();

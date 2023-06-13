@@ -23,7 +23,6 @@ public class Main{
         myDobuleArray[2] = 3.5;
         System.out.println(myDobuleArray[2]);
 
-        String[] names = {"Andy", "Bob", "Charlie", "David", "Eve"};
         int[] firstTen = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         System.out.println("First: " + firstTen[0]);
         int arrayLength = firstTen.length;
