@@ -1,3 +1,5 @@
+package src;
+
 public class SalariedEmployee extends Employee{
     double annualSalary;
     boolean isRetired;

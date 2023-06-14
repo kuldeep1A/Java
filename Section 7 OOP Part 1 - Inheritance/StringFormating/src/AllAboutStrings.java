@@ -1,5 +1,5 @@
-import org.jetbrains.annotations.NotNull;
-
+//import org.jetbrains.annotations.NotNull;
+package src;
 public class AllAboutStrings {
     public static void main(String[] args) {
         printInformation("Hello Github");

@@ -1,3 +1,5 @@
+package src;
+
 public class StringOptions {
 
     public static void main(String[] args) {

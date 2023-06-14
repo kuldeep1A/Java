@@ -1,3 +1,5 @@
+package src;
+
 public class Worker {
     private final String name;
     private final String birthDate;
