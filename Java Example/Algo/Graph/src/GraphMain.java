@@ -63,10 +63,22 @@ class Graph{
         }
         System.out.println();
     }
+
+    public void Traversal(){
+        boolean[] visited = new boolean[numVertices];
+
+        for (int i = 0; i < numVertices; i++) {
+            if (!visited[i]){
+                System.out.println("BFS travkersal starting from vertex " + i + ": ");
+                breadthFirstSearch(i);
+                System.out.println();
+            }
+        }
+    }
 }
 public class GraphMain {
     public static void main(String[] args) {
-        int numVertices = 5;
+        int numVertices = 8;
         Graph graph = new Graph(numVertices);
 
         graph.addEdge(0, 1, 2);
@@ -76,11 +88,12 @@ public class GraphMain {
         graph.addEdge(1, 4, 4);
         graph.addEdge(2, 3, 2);
         graph.addEdge(3, 4, 1);
+        // add disconnect graph
+        graph.addEdge(5, 6, 2);
+        graph.addEdge(6, 7, 1000);
 
         graph.printGraph();
 
-        int startVertex = 0;
-        System.out.println("BFS traversal starting from vertex: " + startVertex);
-        graph.breadthFirstSearch(startVertex);
+        graph.Traversal();
     }
 }
