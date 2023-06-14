@@ -119,24 +119,24 @@ public class BTree {
     }
 
     public static void main(String[] args) {
-        insert(5);
-        insert(1);
-        insert(3);
-        insert(4);
-        insert(2);
-        insert(7);
-        System.out.println("Preorder: ");
-        preorder(root, "-main-");
-        System.out.println("Inorder: ");
-        inorder(root, "-main-");
-        System.out.println("Postorder: ");
-        postorder(root, "-main-");
-        System.out.println("levelOrder: ");
-        levelOrder(root);
-        System.out.println("levelOrder2: ");
-        List<List<Integer>> res =  levelOrder2(root);
-        for (List<Integer> ele: res)
-            System.out.println(Arrays.toString(new List[]{ele}));
+//        insert(5);
+//        insert(1);
+//        insert(3);
+//        insert(4);
+//        insert(2);
+//        insert(7);
+//        System.out.println("Preorder: ");
+//        preorder(root, "-main-");
+//        System.out.println("Inorder: ");
+//        inorder(root, "-main-");
+//        System.out.println("Postorder: ");
+//        postorder(root, "-main-");
+//        System.out.println("levelOrder: ");
+//        levelOrder(root);
+//        System.out.println("levelOrder2: ");
+//        List<List<Integer>> res =  levelOrder2(root);
+//        for (List<Integer> ele: res)
+//            System.out.println(Arrays.toString(new List[]{ele}));
 
     }
 }
