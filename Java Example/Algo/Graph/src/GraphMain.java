@@ -1,6 +1,8 @@
 package src;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 class Graph{
     private final int numVertices;
@@ -15,21 +17,13 @@ class Graph{
         }
     }
 
-    public static class Edge{
-        private final int destination;
-        private final int weight;
+    static class Edge {
+        int destination;
+        int weight;
 
         public Edge(int destination, int weight){
             this.destination = destination;
             this.weight = weight;
-        }
-
-        public int getDestination(){
-            return this.destination;
-        }
-
-        public int getWeight(){
-            return this.weight;
         }
     }
 
@@ -42,10 +36,32 @@ class Graph{
         for (int i = 0; i < numVertices; i++) {
             System.out.print("Vertex " + i + " -> ");
             for (Edge edge: adjacencyList.get(i)){
-                System.out.print("(" + edge.getDestination() + "d" + ", " + edge.getWeight() + "w" + ") ");
+                System.out.print("(" + edge.destination + "d" + ", " + edge.weight + "w" + ") ");
             }
             System.out.println();
         }
+    }
+
+    public void breadthFirstSearch(int startVertex){
+        boolean[] visited = new boolean[numVertices];
+        Queue<Integer> queue = new LinkedList<>();
+
+        visited[startVertex] = true;
+        queue.add(startVertex);
+
+        while(!queue.isEmpty()){
+            int currentVertex = queue.poll();
+            System.out.print(currentVertex + " ");
+            List<Edge> neighbors = adjacencyList.get(currentVertex);
+            for(Edge neighbor: neighbors){
+                int destination = neighbor.destination;
+                if(!visited[destination]){
+                    visited[destination] = true;
+                    queue.add(destination);
+                }
+            }
+        }
+        System.out.println();
     }
 }
 public class GraphMain {
@@ -62,5 +78,9 @@ public class GraphMain {
         graph.addEdge(3, 4, 1);
 
         graph.printGraph();
+
+        int startVertex = 0;
+        System.out.println("BFS traversal starting from vertex: " + startVertex);
+        graph.breadthFirstSearch(startVertex);
     }
 }
