@@ -1,3 +1,5 @@
+package src;
+
 class isPalindrome {
     public static boolean isPalindrome1(String s) {
         int l = 0;

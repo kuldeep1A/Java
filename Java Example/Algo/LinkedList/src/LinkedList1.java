@@ -1,3 +1,5 @@
+package src;
+
 public class LinkedList1 {
     Node head;
     private static int size;

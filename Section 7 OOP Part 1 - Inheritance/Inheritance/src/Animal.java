@@ -1,4 +1,6 @@
- public class Animal {
+package src;
+
+public class Animal {
 //    Protected that represent this object are use on subclasses
     protected String type;
     private String size;
