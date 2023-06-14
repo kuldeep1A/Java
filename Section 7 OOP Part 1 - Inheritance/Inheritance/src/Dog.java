@@ -1,3 +1,5 @@
+package src;
+
 import java.util.Objects;
 public class Dog extends Animal {
     private String earShape;
