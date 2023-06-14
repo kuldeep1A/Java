@@ -1,3 +1,5 @@
+package src;
+
 /**
  * In this implementation, the findMaximumSubarrayXOR function takes an array of numbers (nums) as input and returns the
  * maximum XOR value of a subarray.

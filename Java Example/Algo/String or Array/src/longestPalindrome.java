@@ -1,3 +1,5 @@
+package src;
+
 public class longestPalindrome {
     public static String longestPalindrome1(String s){
         final String t = join("@" + s + "$");

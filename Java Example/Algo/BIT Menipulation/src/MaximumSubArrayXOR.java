@@ -1,3 +1,5 @@
+package src;
+
 /**
  * In this implementation, we use a Trie data structure to store the prefix XOR values. The TrieNode class
  * represents a node in the Trie, and the Trie class represents the Trie itself. The insert method is used
