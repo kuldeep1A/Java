@@ -42,8 +42,7 @@ class Graph{
         }
     }
 
-    public void breadthFirstSearch(int startVertex){
-        boolean[] visited = new boolean[numVertices];
+    public void breadthFirstSearch(int startVertex, boolean[] visited){
         Queue<Integer> queue = new LinkedList<>();
 
         visited[startVertex] = true;
@@ -64,17 +63,10 @@ class Graph{
         System.out.println();
     }
 
-    public void Traversal(){
-        boolean[] visited = new boolean[numVertices];
 
-        for (int i = 0; i < numVertices; i++) {
-            if (!visited[i]){
-                System.out.println("BFS travkersal starting from vertex " + i + ": ");
-                breadthFirstSearch(i);
-                System.out.println();
-            }
-        }
-    }
+//    public void depthFirstSearch(int startVertex){
+//
+//    }
 }
 public class GraphMain {
     public static void main(String[] args) {
@@ -93,7 +85,13 @@ public class GraphMain {
         graph.addEdge(6, 7, 1000);
 
         graph.printGraph();
-
-        graph.Traversal();
+        boolean[] visited = new boolean[numVertices];
+        for (int i = 0; i < numVertices; i++){
+            if(!visited[i]){
+                System.out.println("BSF Traversal starting from vertex: " + i + ": ");
+                graph.breadthFirstSearch(i, visited);
+            }
+        }
+//        graph.depthFirstSearch(0);
     }
 }
