@@ -2,16 +2,11 @@ package src;
 import java.util.ArrayList;
 import java.util.List;
 
-
-// Types of graph implementation
-// adjacency matrix
-// edge list
-// implicit graph
-class Graph1 {
+class Graph{
     private final int numVertices;
-    private final List<List<Integer>> adjacencyList;
+    private final List<List<Edge>> adjacencyList;
 
-    public Graph1(int numVertices){
+    public Graph(int numVertices){
         this.numVertices = numVertices;
         adjacencyList = new ArrayList<>(numVertices);
 
@@ -20,36 +15,52 @@ class Graph1 {
         }
     }
 
-    public void addEdge(int source, int destination){
-        adjacencyList.get(source).add(destination);
+    public static class Edge{
+        private final int destination;
+        private final int weight;
+
+        public Edge(int destination, int weight){
+            this.destination = destination;
+            this.weight = weight;
+        }
+
+        public int getDestination(){
+            return this.destination;
+        }
+
+        public int getWeight(){
+            return this.weight;
+        }
+    }
+
+    public void addEdge(int source, int destination, int weight){
+        Edge edge = new Edge(destination, weight);
+        adjacencyList.get(source).add(edge);
     }
 
     public void printGraph(){
-        for(int i = 0; i < numVertices; i++){
-            System.out.print("Vertex " + i + " is connected to: ");
-            for(Integer neighbor: adjacencyList.get(i)){
-                System.out.print(neighbor + " ");
+        for (int i = 0; i < numVertices; i++) {
+            System.out.print("Vertex " + i + " -> ");
+            for (Edge edge: adjacencyList.get(i)){
+                System.out.print("(" + edge.getDestination() + "d" + ", " + edge.getWeight() + "w" + ") ");
             }
             System.out.println();
         }
     }
 }
-
-public class GraphMain{
+public class GraphMain {
     public static void main(String[] args) {
-        // Create a graph with 5 vertices
-        Graph1 graph = new Graph1(5);
+        int numVertices = 5;
+        Graph graph = new Graph(numVertices);
 
-        // Add edges
-        graph.addEdge(0, 1);
-        graph.addEdge(0, 4);
-        graph.addEdge(1, 2);
-        graph.addEdge(1, 3);
-        graph.addEdge(1, 4);
-        graph.addEdge(2, 3);
-        graph.addEdge(3, 4);
+        graph.addEdge(0, 1, 2);
+        graph.addEdge(0, 4, 5);
+        graph.addEdge(1, 2, 3);
+        graph.addEdge(1, 3, 1);
+        graph.addEdge(1, 4, 4);
+        graph.addEdge(2, 3, 2);
+        graph.addEdge(3, 4, 1);
 
-        // Print the graph
         graph.printGraph();
     }
 }
