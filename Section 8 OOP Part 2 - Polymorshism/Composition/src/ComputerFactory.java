@@ -1,3 +1,5 @@
+package src;
+
 public class ComputerFactory {
     public static void main(String[] args) {
         ComputerCase theCase = new ComputerCase("2208", "Dell",

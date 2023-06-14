@@ -1,3 +1,5 @@
+package src;
+
 public class HourlyEmployee extends Employee {
     private final double hourlyPayRate;
 

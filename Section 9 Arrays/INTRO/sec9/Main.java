@@ -1,4 +1,4 @@
-package sec9.array;
+package sec9;
 
 import java.util.Arrays;
 import java.util.Objects;

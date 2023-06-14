@@ -1,3 +1,5 @@
+package src;
+
 public class Product {
     private String model;
     private String manufacturer;

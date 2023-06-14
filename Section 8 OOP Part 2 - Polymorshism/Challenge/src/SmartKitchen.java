@@ -1,3 +1,5 @@
+package src;
+
 public class SmartKitchen {
     private final CoffeeMaker brewMaster;
     private final Refrigerator iceBox;

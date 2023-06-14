@@ -1,3 +1,5 @@
+package src;
+
 public class Employee extends Worker {
     private final long employeeId;
     private final String hireDate;

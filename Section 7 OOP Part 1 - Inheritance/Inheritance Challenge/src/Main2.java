@@ -1,3 +1,5 @@
+package src;
+
 public class Main2 {
     public static void main(String[] args) {
         Employee tim = new Employee("Tim", "11/11/1985", "01/01/2020");
