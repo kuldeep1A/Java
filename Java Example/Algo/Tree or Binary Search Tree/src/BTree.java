@@ -23,6 +23,9 @@ public class BTree{
         root = insertRecursive(root, data);
     }
 
+    public void insertWrong(int data){
+        root = insertWrongRecursive(root, data);
+    }
     public void inorderTraversal(){
         inorderTraversalRecursive(root);
     }
@@ -49,5 +52,17 @@ public class BTree{
         }
     }
 
+    private Node insertWrongRecursive(Node root, int data){
+        if (root == null){
+            root = new Node(data);
+            return root;
+        }
 
+        if (data < root.data){
+            root.right = insertWrongRecursive(root.right, data);
+        } else {
+            root.left = insertWrongRecursive(root.left, data);
+        }
+        return root;
+    }
 }
