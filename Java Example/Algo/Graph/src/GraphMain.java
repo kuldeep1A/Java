@@ -1,8 +1,5 @@
 package src;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 class Graph{
     private final int numVertices;
@@ -42,8 +39,7 @@ class Graph{
         }
     }
 
-    public void breadthFirstSearch(int startVertex){
-        boolean[] visited = new boolean[numVertices];
+    public void breadthFirstSearch(int startVertex, boolean[] visited){
         Queue<Integer> queue = new LinkedList<>();
 
         visited[startVertex] = true;
@@ -64,16 +60,27 @@ class Graph{
         System.out.println();
     }
 
-    public void Traversal(){
-        boolean[] visited = new boolean[numVertices];
 
-        for (int i = 0; i < numVertices; i++) {
-            if (!visited[i]){
-                System.out.println("BFS travkersal starting from vertex " + i + ": ");
-                breadthFirstSearch(i);
-                System.out.println();
+    public void depthFirstSearch(int startVertex, boolean[] visited){
+        Stack<Integer> stack = new Stack<>();
+
+        visited[startVertex] = true;
+        stack.push(startVertex);
+
+        while(!stack.isEmpty()){
+            int currentVertex = stack.pop();
+            System.out.print(currentVertex + " ");
+
+            List<Edge> neighbors = adjacencyList.get(currentVertex);
+            for (Edge neighbor: neighbors) {
+                int destination = neighbor.destination;
+                if (!visited[destination]){
+                    visited[destination] = true;
+                    stack.push(destination);
+                }
             }
         }
+        System.out.println();
     }
 }
 public class GraphMain {
@@ -93,7 +100,21 @@ public class GraphMain {
         graph.addEdge(6, 7, 1000);
 
         graph.printGraph();
-
-        graph.Traversal();
+        System.out.println();
+        boolean[] visited = new boolean[numVertices];
+        for (int i = 0; i < numVertices; i++){
+            if(!visited[i]){
+                System.out.print("BFS Traversal starting from vertex: " + i + ": ");
+                graph.breadthFirstSearch(i, visited);
+            }
+        }
+        System.out.println();
+        visited = new boolean[numVertices];
+        for(int i = 0; i < numVertices; i++){
+            if(!visited[i]){
+                System.out.print("DFS Traversal starting from vertex: " + i + ": ");
+                graph.depthFirstSearch(i, visited);
+            }
+        }
     }
 }
