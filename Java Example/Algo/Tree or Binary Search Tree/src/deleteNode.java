@@ -35,14 +35,18 @@ public class deleteNode extends BTree {
     }
     public static void main(String[] args) {
         // Input: root = [5,3,6,2,4,null,7], key = 3,7
-        insert(5);
-        insert(3);
-        insert(6);
-        insert(2);
-        insert(4);
-        insert(7);
-        Node res = deleteNode1(root, 7);
-        levelOrder(res);
+        BTree tree = new BTree();
 
+        tree.insert(5);
+        tree.insert(3);
+        tree.insert(6);
+        tree.insert(2);
+        tree.insert(4);
+        tree.insert(7);
+        tree.inorderTraversal();
+        System.out.println();
+        Node res = deleteNode1(tree.root, 3);
+        tree.updateRoot(res);
+        tree.inorderTraversal();
     }
 }
