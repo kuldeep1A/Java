@@ -28,6 +28,14 @@ class Graph{
         }
     }
 
+    public int getNumVertices(){
+        return numVertices;
+    }
+
+    public List<List<Edge>> getAdjacencyList() {
+        return adjacencyList;
+    }
+
     public void addEdgeW(int source, int destination, int weight){
         Edge edge = new Edge(destination, weight);
         adjacencyList.get(source).add(edge);
@@ -46,28 +54,6 @@ class Graph{
             System.out.println();
         }
     }
-
-    public void breadthFirstSearch(int startVertex, boolean[] visited){
-        Queue<Integer> queue = new LinkedList<>();
-
-        visited[startVertex] = true;
-        queue.add(startVertex);
-
-        while(!queue.isEmpty()){
-            int currentVertex = queue.poll();
-            System.out.print(currentVertex + " ");
-            List<Edge> neighbors = adjacencyList.get(currentVertex);
-            for(Edge neighbor: neighbors){
-                int destination = neighbor.destination;
-                if(!visited[destination]){
-                    visited[destination] = true;
-                    queue.add(destination);
-                }
-            }
-        }
-        System.out.println();
-    }
-
 
     public void depthFirstSearch(int startVertex, boolean[] visited){
         Stack<Integer> stack = new Stack<>();
