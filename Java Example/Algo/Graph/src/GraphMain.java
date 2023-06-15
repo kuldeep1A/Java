@@ -18,14 +18,22 @@ class Graph{
         int destination;
         int weight;
 
+        public Edge(int destination){
+            this.destination = destination;
+        }
+
         public Edge(int destination, int weight){
             this.destination = destination;
             this.weight = weight;
         }
     }
 
-    public void addEdge(int source, int destination, int weight){
+    public void addEdgeW(int source, int destination, int weight){
         Edge edge = new Edge(destination, weight);
+        adjacencyList.get(source).add(edge);
+    }
+    public void addEdge(int source, int destination){
+        Edge edge = new Edge(destination);
         adjacencyList.get(source).add(edge);
     }
 
@@ -81,40 +89,5 @@ class Graph{
             }
         }
         System.out.println();
-    }
-}
-public class GraphMain {
-    public static void main(String[] args) {
-        int numVertices = 8;
-        Graph graph = new Graph(numVertices);
-
-        graph.addEdge(0, 1, 2);
-        graph.addEdge(0, 4, 5);
-        graph.addEdge(1, 2, 3);
-        graph.addEdge(1, 3, 1);
-        graph.addEdge(1, 4, 4);
-        graph.addEdge(2, 3, 2);
-        graph.addEdge(3, 4, 1);
-        // add disconnect graph
-        graph.addEdge(5, 6, 2);
-        graph.addEdge(6, 7, 1000);
-
-        graph.printGraph();
-        System.out.println();
-        boolean[] visited = new boolean[numVertices];
-        for (int i = 0; i < numVertices; i++){
-            if(!visited[i]){
-                System.out.print("BFS Traversal starting from vertex: " + i + ": ");
-                graph.breadthFirstSearch(i, visited);
-            }
-        }
-        System.out.println();
-        visited = new boolean[numVertices];
-        for(int i = 0; i < numVertices; i++){
-            if(!visited[i]){
-                System.out.print("DFS Traversal starting from vertex: " + i + ": ");
-                graph.depthFirstSearch(i, visited);
-            }
-        }
     }
 }
