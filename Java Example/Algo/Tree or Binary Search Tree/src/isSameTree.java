@@ -3,17 +3,10 @@ package src;
 public class isSameTree extends BTree {
 
     public static boolean _isSameTree(Node tree1, Node tree2){
-        if (tree2 == null && tree1 == null){
-            return true;
-        }
         if (tree2 == null || tree1 == null){
-            return false;
+            return tree1 == tree2;
         }
-
-        if (tree2.data == tree1.data){
-            return _isSameTree(tree1.left, tree2.left) && _isSameTree(tree1.right, tree2.right);
-        }
-        return false;
+        return tree1.data == tree2.data && _isSameTree(tree1.left, tree2.left) && _isSameTree(tree1.right, tree2.right);
     }
     public static void main(String[] args) {
         isSameTree tree1 = new isSameTree();
@@ -31,7 +24,7 @@ public class isSameTree extends BTree {
         tree2.insert(2);
         tree2.insert(1);
         // for false
-        tree2.insert(43);
+        tree2.insert(3);
         tree2.insert(7);
         tree2.insert(9);
         tree2.insert(6);
