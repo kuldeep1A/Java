@@ -47,8 +47,6 @@ public class Graph {
     public void addEdge(int source, int destination){
         Edge edge = new Edge(destination);
         adjacencyList.get(source).add(edge);
-        edge = new Edge(source);
-        adjacencyList.get(destination).add(edge);
     }
 
     // For Undirected Graph
