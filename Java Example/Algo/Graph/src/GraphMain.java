@@ -54,26 +54,4 @@ class Graph{
             System.out.println();
         }
     }
-
-    public void depthFirstSearch(int startVertex, boolean[] visited){
-        Stack<Integer> stack = new Stack<>();
-
-        visited[startVertex] = true;
-        stack.push(startVertex);
-
-        while(!stack.isEmpty()){
-            int currentVertex = stack.pop();
-            System.out.print(currentVertex + " ");
-
-            List<Edge> neighbors = adjacencyList.get(currentVertex);
-            for (Edge neighbor: neighbors) {
-                int destination = neighbor.destination;
-                if (!visited[destination]){
-                    visited[destination] = true;
-                    stack.push(destination);
-                }
-            }
-        }
-        System.out.println();
-    }
 }
