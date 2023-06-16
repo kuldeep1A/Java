@@ -1,3 +1,5 @@
+import src.levelOrder;
+
 import java.util.*;
 import java.util.LinkedList;
 
@@ -136,10 +138,8 @@ public class BinaryTree {
             }
             res.add(level);
         }
-
         return res;
     }
-
     public static void main(String[] args) {
 //        insert(5);
 //        insert(1);
@@ -160,5 +160,18 @@ public class BinaryTree {
 //        for (List<Integer> ele: res)
 //            System.out.println(Arrays.toString(new List[]{ele}));
 
+        insert(7);
+        insert(3);
+        insert(9);
+        insert(20);
+        insert(15);
+        preorder(root, "main");
+
+        System.out.println();
+        List<List<Integer>> levels = levelOrder2(root);
+
+        for (List<Integer> level: levels){
+            System.out.println(level);
+        }
     }
 }
