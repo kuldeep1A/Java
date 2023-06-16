@@ -1,10 +1,9 @@
 package src;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-public class AllPathFromSrcTrg extends GraphD {
+public class AllPathFromSrcTrg extends Graph {
     public AllPathFromSrcTrg(int numVertices) {
         super(numVertices);
     }
@@ -40,7 +39,7 @@ public class AllPathFromSrcTrg extends GraphD {
         graph.addEdge(3, 4);
         graph.addEdge(3, 5);
         graph.addEdge(4, 5);
-        graph.addEdge(4, 3);
+//        graph.addEdge(4, 3);
         graph.addEdge(5, 6);
 
         graph.printGraph();

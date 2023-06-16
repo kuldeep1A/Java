@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class BreadthFirstSearch extends GraphD{
+public class BreadthFirstSearch extends Graph {
 
     public BreadthFirstSearch(int numVertices) {
         super(numVertices);
