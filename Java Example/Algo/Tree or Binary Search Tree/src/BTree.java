@@ -30,6 +30,10 @@ public class BTree{
         inorderTraversalRecursive(root);
     }
 
+    public void preorderTraversal() {
+        preorderTraversalRecursive(root);
+    }
+
     private Node insertRecursive(Node root, int data){
         if (root == null){
             root = new Node(data);
@@ -49,6 +53,14 @@ public class BTree{
             inorderTraversalRecursive(root.left);
             System.out.print(root.data + " ");
             inorderTraversalRecursive(root.right);
+        }
+    }
+
+    private void preorderTraversalRecursive(Node root){
+        if (root != null){
+            System.out.print(root.data + " ");
+            preorderTraversalRecursive(root.left);
+            preorderTraversalRecursive(root.right);
         }
     }
 
