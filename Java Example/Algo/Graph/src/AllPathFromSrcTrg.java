@@ -32,15 +32,14 @@ public class AllPathFromSrcTrg extends Graph {
 
     public static void main(String[] args) {
         AllPathFromSrcTrg graph = new AllPathFromSrcTrg(7);
-        graph.addEdge(0, 1);
-        graph.addEdge(0, 2);
-        graph.addEdge(1, 3);
-        graph.addEdge(2, 4);
-        graph.addEdge(3, 4);
-        graph.addEdge(3, 5);
-        graph.addEdge(4, 5);
-//        graph.addEdge(4, 3);
-        graph.addEdge(5, 6);
+        graph.addEdgeU(0, 1);
+        graph.addEdgeU(0, 2);
+        graph.addEdgeU(1, 3);
+        graph.addEdgeU(2, 4);
+        graph.addEdgeU(3, 4);
+        graph.addEdgeU(3, 5);
+        graph.addEdgeU(4, 5);
+        graph.addEdgeU(5, 6);
 
         graph.printGraph();
         List<String> paths = graph.allPath(graph.getAdjacencyList(), 0, 5);
