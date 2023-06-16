@@ -8,8 +8,8 @@ public class AllPathFromSrcTrg extends Graph {
         super(numVertices);
     }
 
-    private final List<String> paths = new ArrayList<>();
-    private void dfs(List<List<Edge>> graph, boolean[] visited, String path, int current, int target){
+    private final List<List<Integer>> paths = new ArrayList<>();
+    private void dfs(List<List<Edge>> graph, boolean[] visited, List<Integer> path, int current, int target){
         if (current == target){
             paths.add(path);
             return;
@@ -18,15 +18,18 @@ public class AllPathFromSrcTrg extends Graph {
             Edge edge = graph.get(current).get(i);
             if (!visited[edge.destination]){
                 visited[current] = true;
-                dfs(graph, visited, path + edge.destination, edge.destination, target);
+                path.add(edge.destination);
+                dfs(graph, visited, path, edge.destination, target);
                 visited[current] = false;
             }
         }
     }
 
-    public List<String> allPath(List<List<Edge>> graph, int current, int target){
+    public List<List<Integer>> allPath(List<List<Edge>> graph, int current, int target){
         boolean[] visited = new boolean[graph.size()];
-        dfs(graph, visited, "0", current, target);
+        List<Integer> path = new ArrayList<>();
+        path.add(0);
+        dfs(graph, visited, path, current, target);
         return paths;
     }
 
@@ -40,10 +43,9 @@ public class AllPathFromSrcTrg extends Graph {
         graph.addEdgeU(3, 5);
         graph.addEdgeU(4, 5);
         graph.addEdgeU(5, 6);
-
         graph.printGraph();
-        List<String> paths = graph.allPath(graph.getAdjacencyList(), 0, 5);
-        for(String path: paths){
+        List<List<Integer>> paths = graph.allPath(graph.getAdjacencyList(), 0, 5);
+        for(List<Integer> path: paths){
             System.out.println(path);
         }
     }
