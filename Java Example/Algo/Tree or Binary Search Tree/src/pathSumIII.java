@@ -18,17 +18,23 @@ public class pathSumIII extends OwnBTree{
                 + dfs(tree.right, target - tree.data);
     }
     public static void main(String[] args) {
-        pathSumIII tree = new pathSumIII(10);
-        tree.left = new OwnBTree(5);
-        tree.left.left = new OwnBTree(3);
-        tree.left.left.left = new OwnBTree(3);
-        tree.left.left.right = new OwnBTree(-2);
-        tree.left.right = new OwnBTree(2);
-        tree.left.right.right = new OwnBTree(1);
-        tree.right = new OwnBTree(-3);
-        tree.right.right = new OwnBTree(11);
+//        [1000000000,1000000000,null,294967296,null,1000000000,null,1000000000,null,1000000000]
+        pathSumIII tree = new pathSumIII(1000000000);
+        tree.left = new OwnBTree(1000000000);
+        tree.left.left = new OwnBTree(294967296);
+        tree.left.left.left = new OwnBTree(1000000000);
+        tree.left.left.left.left = new OwnBTree(1000000000);
+        tree.left.left.left.left.left = new OwnBTree(1000000000);
+//        tree.left = new OwnBTree(5);
+//        tree.left.left = new OwnBTree(3);
+//        tree.left.left.left = new OwnBTree(3);
+//        tree.left.left.right = new OwnBTree(-2);
+//        tree.left.right = new OwnBTree(2);
+//        tree.left.right.right = new OwnBTree(1);
+//        tree.right = new OwnBTree(-3);
+//        tree.right.right = new OwnBTree(11);
 
-        int ans = _pathSumIII(tree, 8);
+        int ans = _pathSumIII(tree, 0);
         System.out.println(ans);
 
     }
