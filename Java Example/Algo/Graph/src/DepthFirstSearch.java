@@ -3,7 +3,7 @@ package src;
 import java.util.List;
 import java.util.Stack;
 
-public class DepthFirstSearch extends Graph{
+public class DepthFirstSearch extends GraphD{
     public DepthFirstSearch(int numVertices){
         super(numVertices);
     }

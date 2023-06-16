@@ -1,11 +1,11 @@
 package src;
 import java.util.*;
 
-class Graph{
+public class GraphD{
     private final int numVertices;
     private final List<List<Edge>> adjacencyList;
 
-    public Graph(int numVertices){
+    public GraphD(int numVertices){
         this.numVertices = numVertices;
         adjacencyList = new ArrayList<>(numVertices);
 

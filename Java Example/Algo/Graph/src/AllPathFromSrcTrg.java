@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class AllPathFromSrcTrg extends Graph {
+public class AllPathFromSrcTrg extends GraphD {
     public AllPathFromSrcTrg(int numVertices) {
         super(numVertices);
     }
