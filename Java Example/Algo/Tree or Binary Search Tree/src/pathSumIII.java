@@ -5,12 +5,12 @@ public class pathSumIII extends OwnBTree{
         super(data);
     }
 
-    public static int _pathSumIII(OwnBTree tree, int target){
+    public static int _pathSumIII(OwnBTree tree, long target){
         if (tree == null)
             return 0;
         return dfs(tree, target) + _pathSumIII(tree.left, target) + _pathSumIII(tree.right, target);
     }
-    private static int dfs(OwnBTree tree, int target){
+    private static int dfs(OwnBTree tree, long target){
         if (tree == null)
             return 0;
 
