@@ -34,6 +34,11 @@ public class pathSumII extends OwnBTree {
     public static void main(String[] args) {
         pathSumII tree = new pathSumII(5);
 
+//        Given the root of a binary tree and an integer targetSum,
+//        return all root-to-leaf paths where the sum of the node values in
+//        the path equals targetSum. Each path should be returned as a list of
+//        the node values, not node references.
+
         tree.left = new OwnBTree(4);
         tree.left.left = new OwnBTree(11);
         tree.left.left.left = new OwnBTree(7);
