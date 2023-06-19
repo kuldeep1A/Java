@@ -8,26 +8,27 @@ public class AllPathFromSrcTrg extends Graph {
         super(numVertices);
     }
 
-    private final List<String> paths = new ArrayList<>();
-    private void dfs(List<List<Edge>> graph, boolean[] visited, String path, int current, int target){
-        if (current == target){
-            paths.add(path);
-            return;
-        }
-        for (int i = 0; i < graph.get(current).size(); i++){
-            Edge edge = graph.get(current).get(i);
-            if (!visited[edge.destination]){
-                visited[current] = true;
-                dfs(graph, visited, path + edge.destination, edge.destination, target);
-                visited[current] = false;
-            }
-        }
+    public static List<List<Integer>> allPath(AllPathFromSrcTrg graph, int current, int target){
+        List<List<Integer>> paths = new ArrayList<>();
+        List<Integer> visited = new ArrayList<>();
+        dfs_helper(graph, visited, current, target, paths);
+        return paths;
     }
 
-    public List<String> allPath(List<List<Edge>> graph, int current, int target){
-        boolean[] visited = new boolean[graph.size()];
-        dfs(graph, visited, "0", current, target);
-        return paths;
+    private static void dfs_helper(AllPathFromSrcTrg graph, List<Integer> visited, int current, int target, List<List<Integer>> paths){
+        visited.add(current);
+        if (current == target){
+            paths.add(new ArrayList<>(visited));
+        } else {
+            List<Edge> neighbors = graph.getAdjacencyList().get(current);
+            for (Edge neighbor: neighbors){
+                int destination = neighbor.destination;
+                if (!visited.contains(destination)){
+                    dfs_helper(graph, visited, destination, target, paths);
+                }
+            }
+        }
+        visited.remove(visited.size() - 1);
     }
 
     public static void main(String[] args) {
@@ -41,7 +42,8 @@ public class AllPathFromSrcTrg extends Graph {
         graph.addEdgeU(4, 5);
         graph.addEdgeU(5, 6);
         graph.printGraph();
-        List<String> paths = graph.allPath(graph.getAdjacencyList(), 0, 5);
+        List<List<Integer>> paths = graph.allPath(graph, 0, 5);
         System.out.println(paths);
+
     }
 }
