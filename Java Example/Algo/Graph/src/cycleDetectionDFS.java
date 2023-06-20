@@ -2,8 +2,8 @@ package src;
 
 import java.util.List;
 
-public class cycleDetection extends Graph{
-    public cycleDetection(int vertices){
+public class cycleDetectionDFS extends Graph{
+    public cycleDetectionDFS(int vertices){
         super(vertices);
     }
 
@@ -35,7 +35,7 @@ public class cycleDetection extends Graph{
         return false;
     }
     public static void main(String[] args) {
-        cycleDetection graph = new cycleDetection(4);
+        cycleDetectionDFS graph = new cycleDetectionDFS(4);
         graph.addEdge(0, 1);
         graph.addEdge(1, 2);
         graph.addEdge(2, 3);
