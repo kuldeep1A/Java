@@ -17,12 +17,20 @@ public class Graph {
     static class Edge {
         int destination;
         int weight;
+        int source;
 
         public Edge(int destination){
             this.destination = destination;
         }
 
         public Edge(int destination, int weight){
+            this.destination = destination;
+            this.weight = weight;
+        }
+
+        // for access the source node
+        public Edge(int source, int destination, int weight){
+            this.source = source;
             this.destination = destination;
             this.weight = weight;
         }
@@ -34,6 +42,20 @@ public class Graph {
 
     public List<List<Edge>> getAdjacencyList() {
         return adjacencyList;
+    }
+
+    // creating edge for access the source node for directed graph
+    public void addEdgeSW(int source, int destination, int weight){
+        Edge edge = new Edge(source, destination, weight);
+        adjacencyList.get(source).add(edge);
+    }
+
+    // creating edge for access the source node for Un-directed graph
+    public void addEdgeUSW(int source, int destination, int weight){
+        Edge edge = new Edge(source, destination, weight);
+        adjacencyList.get(source).add(edge);
+        edge = new Edge(destination, source, weight);
+        adjacencyList.get(destination).add(edge);
     }
 
 
