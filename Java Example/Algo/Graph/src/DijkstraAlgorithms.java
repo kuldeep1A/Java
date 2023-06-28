@@ -59,7 +59,7 @@ public class DijkstraAlgorithms {
                     }
                 }
             }
-            }
+        }
         return distance;
     }
 
