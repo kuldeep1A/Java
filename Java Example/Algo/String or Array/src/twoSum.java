@@ -6,10 +6,17 @@ public class twoSum {
     public static int[] _twoSum(int[] nums, int target){
         HashMap<Integer, Integer> numMap = new HashMap<>();
         int len = nums.length;
+//        for (int i = 0; i < len; i++){
+//            int complement = target - nums[i];
+//            if (numMap.containsKey(complement)) {
+//                return new int[] {numMap.get(complement), i};
+//            }
+//            numMap.put(nums[i], i);
+//        }
+//        return new int[] {};
         for (int i = 0; i < len; i++){
-            int complement = target - nums[i];
-            if (numMap.containsKey(complement)) {
-                return new int[] {numMap.get(complement), i};
+            if (numMap.containsKey(target - nums[i])){
+                return new int[] {numMap.get(target - nums[i]), i};
             }
             numMap.put(nums[i], i);
         }
