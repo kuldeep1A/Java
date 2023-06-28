@@ -11,7 +11,10 @@ import java.util.List;
 //
 //Notice that the solution set must not contain duplicate triplets.
 public class threeSum {
-    public static List<List<Integer>> _threeSum(int[] nums){
+    public static List<List<Integer>> _threeSum(int[] nums) {
+        if (nums.length < 2){
+            return new ArrayList<>();
+        }
         List<List<Integer>> result = new ArrayList<>();
         Arrays.sort(nums);
 
