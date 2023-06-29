@@ -1,5 +1,9 @@
 interface FirstInterface {
     public void myMethod(); // interface method
+
+    default void myMethode() {
+
+    }
 }
 
 interface SecondInterface {
