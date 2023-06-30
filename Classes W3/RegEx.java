@@ -14,9 +14,35 @@ import java.util.regex.Matcher;
         PatternSyntaxException Class - Indicates syntax error in a regular expression pattern
  */
 public class RegEx {
+//Expression	Description
+//[abc]	Find one character from the options between the brackets
+//[^abc]	Find one character NOT between the brackets
+//[0-9]	Find one character from the range 0 to 9
+
+//    Metacharacter	Description
+//|	Find a match for any one of the patterns separated by | as in: cat|dog|fish
+//.	Find just one instance of any character
+//^	Finds a match as the beginning of a string as in: ^Hello
+//$	Finds a match at the end of the string as in: World$
+//\d	Find a digit
+//\s	Find a whitespace character
+//\b	Find a match at the beginning of a word like this: \bWORD, or at the end of a word like this: WORD\b
+//'\\uxxxx'Find the Unicode character specified by the hexadecimal number xxxx
+
+//Quantifier	Description
+//n+	Matches any string that contains at least one n
+//n*	Matches any string that contains zero or more occurrences of n
+//n?	Matches any string that contains zero or one occurrences of n
+//n{x}	Matches any string that contains a sequence of X n's
+//n{x,y}	Matches any string that contains a sequence of X to Y n's
+//n{x,}	Matches any string that contains a sequence of at least X n's
+
     public static void main(String[] args) {
-        Pattern pattern = Pattern.compile("I will learn the regEx in today", Pattern.CASE_INSENSITIVE);
-        Matcher matcher = pattern.matcher("regEx lkfj");
+
+        // pattern created
+        Pattern pattern = Pattern.compile("t", Pattern.CASE_INSENSITIVE);
+
+        Matcher matcher = pattern.matcher("I will learn the regEx in today");
 
         boolean matchFind = matcher.find();
         if (matchFind){
