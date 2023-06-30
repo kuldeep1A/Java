@@ -1,13 +1,13 @@
 interface FirstInterface {
-    public void myMethod(); // interface method
+    void myMethod(); // interface method and interface method by default public or abstract
 
     default void myMethode() {
-
+        System.out.println("hello Interface");
     }
 }
 
 interface SecondInterface {
-    public void myOtherMethod(); // interface method
+    void myOtherMethod(); // interface method and interface method by default public or abstract
 }
 
 // DemoClass "implements" FirstInterface and SecondInterface
@@ -26,5 +26,6 @@ class Interface {
         DemoClass myObj = new DemoClass();
         myObj.myMethod();
         myObj.myOtherMethod();
+        myObj.myMethode();
     }
 }
