@@ -17,7 +17,7 @@ public class Challenge {
         System.out.println();
         System.out.println(Arrays.toString(firstArr));
 
-        int[] secondArr = getRandomArr(10);
+        int[] secondArr = getRandomArr(11);
         int[] res = sortInteger(secondArr);
         System.out.println(Arrays.toString(res));
 
