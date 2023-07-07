@@ -1,0 +1,27 @@
+This slide demonstrate that arrays and ArrayLists have more in common, than they don't
+
+           Feature            |          array              |  ArrayList
+-------------------------------------------------------------------------
+primitives type supported     | YES                         |    NO
+indexed                       | YES                         |    YES
+ordered by index              | YES                         |    YES
+duplicates allowed            | YES                         |    YES
+nulls allowed                 | YES, for non-primitive types|    YES
+resizable                     | NO                          |    YES
+mutable                       | YES                         |    YES
+inherits from java.util.Object| YES                         |    YES
+implements List interface     | NO                          |    YES
+-------------------------------------------------------------------------
+
+Instantiating without Values
+________________________________________________________________________________________________________
+             Instantiating Arrays                     |           Instantiating ArrayLists
+--------------------------------------------------------------------------------------------------------
+  String[] array = new String[10];                    |  ArrayList<String> arrayList = new ArrayList<>();
+  -----------------------------------------------     |  ---------------------------------------------
+ |An array of 10 elements is created, all with   |    | |An empty ArrayList is Created.               |
+ |null references. The compiler will only permit |    | |The compiler will check that only String are |
+ |Strings to be assigned to the elements.        |    | |added to the ArrayList.                      |
+  -----------------------------------------------     |  ---------------------------------------------
+                                                      |
+______________________________________________________|_________________________________________________

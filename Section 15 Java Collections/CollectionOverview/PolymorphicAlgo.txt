@@ -1,0 +1,5 @@
+Oracle's documentation describes a polymorphic algorithm as a piece of reusable
+functionality.
+
+At one time, most of these methods were provided to us, as static methods, on a class
+called java.util.Collections
