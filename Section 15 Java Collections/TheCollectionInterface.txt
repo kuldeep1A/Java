@@ -40,3 +40,16 @@ Collection - The Big Picture
                                           Implementation:
                                           TreeSet
 _____________________________________________________________________________________________________________
+
+                                          <<Interface>>
+                                          Map
+                                          Implementation:
+                                          HashMap
+                                          LinkedHashMap
+                                                ↑
+                                                |
+                                                |
+                                          <<interface>>
+                                          SortedMap
+                                          Implementation:
+                                          TreeMap
