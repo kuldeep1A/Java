@@ -2,9 +2,6 @@ import java.util.*;
 
 public class CollList {
     public static void main(String[] args) {
-//        List<String> list = new ArrayList<>();
-//        String[] names = {"Anna", "Bob", "Carol", "David", "Edna"};
-//        list.addAll(Arrays.asList(names));
         String[] names = {"Anna", "Bob", "Carol", "David", "Edna"};
         List<String> list = new ArrayList<>(Arrays.asList(names));
         list.add("naveenBro");

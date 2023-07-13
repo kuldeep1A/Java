@@ -3,3 +3,7 @@ functionality.
 
 At one time, most of these methods were provided to us, as static methods, on a class
 called java.util.Collections
+
+//        List<String> list = new ArrayList<>();
+//        String[] names = {"Anna", "Bob", "Carol", "David", "Edna"};
+//        list.addAll(Arrays.asList(names));

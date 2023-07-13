@@ -5,6 +5,6 @@ public class Cards {
     private int SPADE;
 
     public static int getNumericCard() {
-
+        return 1;
     }
 }
