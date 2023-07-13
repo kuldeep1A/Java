@@ -1,0 +1,55 @@
+The Collection Interface
+The collection interface is the root of the collection hierarchy.
+
+Like most roots in software hierarchies, it's an abstract representation
+of the behavior you'd need, for managing a group of objects.
+
+<<interface>>
+Collection          [Base Interface]
+-------------------------------------
+  add(E e)
+  addAll(Collection)
+  clear()
+  contains(Object o)
+  containsAll(Collection)
+  iterator()
+  remove(Object o)
+  removeAll(Collection)
+  removeIf(Predicate)
+  retainAll(Collection)
+---------------------------------------
+
+Collection - The Big Picture
+
+ ↓                                     <<Interface>>
+                                        Collection
+                                             ↑
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        ↑                                    ↑                                        ↑
+        |                                    |                                        |
+        |                                    |                                        |
+        <<Interface>>                     <<Interface>>                             <<Interface>>
+        List                              Set                                       Queue
+        Implementations:                  Implementations:                            ↑
+        LinkedList                        HashSet                                     |
+        ArrayList                         LinkedHashSet                             <<Interface>>
+                                             ↑                                      Deque
+                                             |                                      Implementation:
+                                          <<Interface>>                             ArrayDeque
+                                          SortedSet                                 LinkedList
+                                          Implementation:
+                                          TreeSet
+_____________________________________________________________________________________________________________
+
+                                          <<Interface>>
+                                          Map
+                                          Implementation:
+                                          HashMap
+                                          LinkedHashMap
+                                                ↑
+                                                |
+                                                |
+                                          <<interface>>
+                                          SortedMap
+                                          Implementation:
+                                          TreeMap
